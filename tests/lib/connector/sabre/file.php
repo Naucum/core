@@ -54,8 +54,9 @@ class Test_OC_Connector_Sabre_File extends \Test\TestCase {
 
 		$file = new OC_Connector_Sabre_File($view, $info);
 
-		// action
+		// throws exception on error, cant assert the value of the etag so we do a dummy assert to keep phpunit happy
 		$file->put('test data');
+		$this->assertTrue(true);
 	}
 
 	/**
